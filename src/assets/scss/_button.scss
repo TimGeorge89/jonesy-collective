@@ -1,0 +1,85 @@
+// green buttons
+button {
+  background-image: linear-gradient(to bottom right, $dark-green, $light-green);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  // on hover
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 15px 5px rgba(0, 0, 0, 0.2);
+    transition: $transition;
+  // on click
+    &:active {
+      transform: scale(1.05);
+      box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);
+      transition: $transition;
+    }
+  }
+}
+// blue buttons
+.button-2 {
+  background-image: linear-gradient(to bottom right, $dark-blue, $light-blue);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 45px;
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.2);
+    transition: $transition;
+
+    &:active {
+      transform: scale(1.05);
+      box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);
+      transition: $transition;
+    }
+  }
+}
+
+.button-2-fb {
+  background-image: linear-gradient(to bottom right, $dark-blue, $light-blue);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  margin-right: 20px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.2);
+    transition: $transition;
+
+    &:active {
+      transform: scale(1.05);
+      box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);
+      transition: $transition;
+    }
+  }
+}
