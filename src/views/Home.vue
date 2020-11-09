@@ -1,16 +1,14 @@
 <template>
   <div class="home">
     
-    <!-- <Navigation></Navigation> -->
-
     <div class="hero">
       <div class="wrapper">
         <div class="main-hero">
         <h1>The Jonesy Collective</h1>
         <p>In tribute to the life and love of Alex Hwang Jones.</p>
         <div>
-          <button>About</button>
-          <button>Connect</button>
+          <router-link to="/about"><button class="button-2">About</button></router-link>
+          <router-link to="/connect"><button class="button-2">Connect</button></router-link>
         </div>
       </div>
       </div>
@@ -19,8 +17,8 @@
     <div class="content-2">
         <div class="wrapper">
           <div class="a">
-            <h3>Our Mission</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>Our Mission Summary</h3>
+            <p>Our mission, in tribute to the life and love of Alex Hwang Jones, is to educate, support and connect through visionary art and dance.</p>
           </div>
           <div class="b">
             <div class="b-content">
@@ -28,8 +26,8 @@
               <p>The Jonesy Collective was founded on Oct. 8, 2020.  Local community art events are being planned where proceeds will be given to more mature national organizations such as MAPs and DanceSafe - organizations that reflect Alex’s goals and values, and where research and safety activities raise hope for more positive outcomes on mental health issues.</p>
               <p>Over the next several weeks this website will be built and updated to include calanders, events, videos, and pictures, as well as a way to donate to the foundation!</p>
               <div>
-                <a href=""><button class="button-2">About</button></a>
-                <a href="https://www.facebook.com/thejonesycollective" target="_blank" ><button class="button-2">f</button></a>
+                <router-link to="/about"><button class="button-2">About</button></router-link>
+                <a href="https://www.facebook.com/thejonesycollective" target="_blank" ><button class="button-2">Facebook</button></a>
               </div>
             </div>
           </div>
@@ -41,53 +39,47 @@
           <!-- TIPPLE CARD -->
           <div class="tripple">
             <div class="tripple-content">
-              <h3>Statement</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button>Click here</button>
+              <h3>Events</h3>
+              <p>Events are being planned and will be updated here. If you have any questions or would like to plan an event you can contact us here or through our facebook page.</p>
+              <router-link to="/connect"><button class="button">Connect</button></router-link>
             </div>
           </div>
           <!-- TIPPLE CARD -->
           <div class="tripple">
             <div class="tripple-content">
-              <h3>Statement</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button>Click here</button>
+              <h3>Artists</h3>
+              <p>A big part of the Jonesy Collective is our collective of artisits from all walks of life. Our artists are an integral part of our identity and what we stand for. You can check out our artisits here.</p>
+              <button>JC Artists</button>
             </div>
           </div>
           <!-- TIPPLE CARD -->
           <div class="tripple">
             <div class="tripple-content">
-              <h3>Statement</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              <button>Click here</button>
+              <h3>Donate</h3>
+              <p>Help our cause and many others by donating to the Jonesy Collective. 100% of your donation goes to helping educate, support and connect through visionary art and dance.</p>
+              <button>Donate</button>
             </div>
           </div>
         </div>
       </div>
 
+      
+
   </div>
 </template>
 
  <script>
-// import Navigation from '@/components/Navigation'
 
-// export default {
-//   data() {
-//     return {
-
-//     }
-//   },
-//   components: {Navigation}
-// }
  </script>
 
 <style lang="scss" scoped>
 
 .hero {
-  background: $light-blue;
-  background: radial-gradient(circle, rgba($dark-blue, 1) 0%, rgba(darken($blue, 20%), 1) 100%);
+  background-image: url('/images/lowpoly.jpg');
+  background-position: top;
+  background-size: cover;
   height: 500px;
-  width: 100%;
+  width: 100%; 
 
   .wrapper {
     display: flex;
@@ -114,8 +106,13 @@
   }
 }
 
+// BEGIN MEDIA QUERY
+
+// END MEDIA QUERY
+
 .content-2 {
-  margin: 0 30px;
+  display: flex;
+  padding: 60px 30px;
 
   .wrapper {
     display: flex;
@@ -127,41 +124,64 @@
     width: 50%;
     padding-right: 50px;
     margin-left: 0 auto;
+    
   }
 
   .b {
-     width: 40%;
-     display: flex;
-     background: linear-gradient(45deg, rgba($dark-green, 1) 0%, rgba($light-green, 1) 100%);
-     border-radius: 10px 40px;
-     box-shadow: 5px 10px 15px rgba(#333, 0.5);
-     margin-top: -150px;
-     margin-left: auto;
-    // height: 500px;
-     padding: 40px;
+    display: flex;
+    width: 40%;
+    color: white;
+    background: linear-gradient(45deg, rgba($dark-green, 1) 0%, rgba($light-green, 1) 100%);
+    border-radius: 10px 40px;
+    box-shadow: 5px 10px 15px rgba(#333, 0.5);
+    margin-top: -150px;
+    margin-left: auto;
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .content-2 {
     
+
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .a {
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .b {
+      width: 100%;
+      margin: 0;
+    }
   }
 }
 
   .villan {
-    height: 500px;
-    background: $light-blue;
-    background: radial-gradient(circle, rgba(darken($light-green, 20%), 1) 0%, rgba($dark-green, 1) 100%);
-    margin-top: 50px;
-    padding-top: 30px;
+    // height: 500px;
+    background-color: #eee;
+    // background-image: url('/images/lowpoly.jpg');
+    // background-position: bottom;
+    // background-size: cover;
+    padding: 60px 30px;
 
     .wrapper {
       display: flex;
+      justify-content: space-between;
+      
     }
 
     .tripple {
       display: flex;
-      width: 33%;
-      height: 400px;
+      width: 31%;
       background-color: white;
       align-items: center;
-      margin: 30px 20px;
-      padding: 30px 15px;
+      padding: 60px 20px;
       border-radius: 10px;
       box-shadow: 5px 10px 15px rgba(#333, 0.5);
 

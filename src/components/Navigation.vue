@@ -9,13 +9,13 @@
       <div class="navigation">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <router-link to="/">Home</router-link>
           </li>
           <li>
-            <a href="#">About</a>
+            <router-link to="/about">About</router-link>
           </li>
           <li>
-            <a href="#">Connect</a>
+            <router-link to="/connect">Connect</router-link>
           </li>
           <li>
             <a href="#">JC Artists</a>
@@ -33,8 +33,9 @@
 <style lang="scss">
   .nav-container {
   display: flex;
+  background-color: $grey;
+  color: white;
   padding: 8px;
-  border-bottom: 2px black solid;
 
   .logo {
     display: flex;
@@ -66,6 +67,22 @@
 
         a {
           font-size: 20px;
+        }
+
+        .router-link-exact-active {
+          color: $light-green;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -3px;
+            height: 3px;
+            background: $light-green;
+
+          }
         }
       }
     }

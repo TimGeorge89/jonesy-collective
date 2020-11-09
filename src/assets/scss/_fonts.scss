@@ -36,17 +36,18 @@ h6 {
 
 p {
   font-weight: 400;
+  font-size: 18px;
   margin: 16px 0;
   line-height: 1.4;
 }
 
 a {
   font-weight: 700;
-  color: $light-blue;
+  color: white;
   text-decoration: none;
   transition: $transition;
 
   &:hover {
-    color: darken($light-blue, 10%);
+    color: darken($light-green, 10%);
   }
 }
