@@ -18,7 +18,7 @@ button {
     transform: scale(1.1);
     box-shadow: 10px 15px 5px rgba(0, 0, 0, 0.2);
     transition: $transition;
-  // on click
+    // on click
     &:active {
       transform: scale(1.05);
       box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);

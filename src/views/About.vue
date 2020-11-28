@@ -17,7 +17,7 @@
     <div class="content-2">
         <div class="wrapper">
           <div class="b">
-            <div>
+            <div class="image-container">
               <img src="/images/jonesybeeasy.jpg">
             </div>
             <div class="b-content">
@@ -37,8 +37,7 @@
                   proceeds will be given to more mature national organizations such as MAPs and 
                   DanceSafe - organizations that reflect Alex’s goals and values
                 </p>
-              <div>
-                <!-- <router-link to="/about" class="button-2">About</router-link> -->
+              <div class="b-buttons">
                 <a href="https://www.facebook.com/thejonesycollective" target="_blank" ><button class="button-2">Facebook</button></a>
                 <a href="https://maps.org/" target="_blank" ><button class="button-2">MAPS</button></a>
                 <a href="https://dancesafe.org/" target="_blank" ><button class="button-2">DanceSafe</button></a>
@@ -52,7 +51,7 @@
       <div class="video-container">
         <div class="video-wrapper">
           <div class="video">
-            <iframe width="740" height="415" src="https://www.youtube.com/embed/k2KgI_x9g_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="responsive-iframe" width="740" height="415" src="https://www.youtube.com/embed/k2KgI_x9g_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -188,13 +187,47 @@
     margin: -150px auto 0 auto;
     padding: 50px;
 
-     img {
-       height: auto;
-       padding-right: 30px;
-       border-radius: 15px;
-       height: 500px;
+    .b-content {
+      p {
+        padding: 20px;
+      }
+    }
+
+    img {
+      height: auto;
+      padding-right: 30px;
+      border-radius: 15px;
+      height: 350px;
 
      }
+  }
+
+  @media screen and (max-width: 1105px) {
+    .b {
+      display: block;
+      text-align: center;
+
+      p {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .b {
+      padding: 5px;
+      .b-content {
+        .b-buttons {
+          display: none;
+        }
+        h3 {
+          display: none;
+        }
+      }
+      img {
+        display: none;
+      }
+    }
   }
 }
 
@@ -202,6 +235,24 @@
   display: flex;
   justify-content: center;
   margin: 0 0 60px 0;
+
+  .video-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+  }
+
+  .responsive-iframe {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 75%;
+  }
 }
 
 
@@ -243,5 +294,22 @@
     } 
   }
 }
+
+@media screen and (max-width: 1105px) {
+  .founders {
+        
+    .wrapper {
+      display: block;
+
+      .team-card {
+        width: 90%;
+        margin: 40px 20px;
+        padding: 30px 50px;
+      }
+    }
+  }
+}
+
+
 
 </style>

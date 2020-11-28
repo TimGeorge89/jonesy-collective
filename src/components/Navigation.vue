@@ -1,68 +1,95 @@
 <template lang="html">
   <div class="nav">
-    <!-- NAV BAR -->
+    <!-- NAV CONTAINER -->
     <div class="nav-container">
+      <!-- LOGO -->
       <div class="logo">
-        <img src="images/jonesycollectivecat.jpg" alt="">
+        <div class="logo-container">
+          <img src="images/jonesycollectivecat.jpg" alt="">
+        </div>
         <h3>Jonesy Collective</h3>
       </div>
-      <div class="navigation">
+      <!-- NAVIGATION -->
+      <div v-bind:class="{ active: isActive }" class="navigation">
         <ul>
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link @click.native="toggle()" to="/">Home</router-link>
           </li>
           <li>
-            <router-link to="/about">About</router-link>
+            <router-link @click.native="toggle()" to="/about">About</router-link>
           </li>
           <li>
-            <router-link to="/connect">Connect</router-link>
+            <router-link @click.native="toggle()" to="/connect">Connect</router-link>
           </li>
           <li>
             <a href="#">JC Artists</a>
           </li>
         </ul>
       </div>
+       <!-- MOBILE NAV -->
+      <a @click="toggle()" class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </a>
     </div>
   </div>
 </template>
 
 <script>
-
+export default {
+  data() {
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    toggle() {
+      this.isActive = !this.isActive
+    }
+  }
+}
 </script>
 
 <style lang="scss">
+
   .nav-container {
-  display: flex;
-  background-color: $grey;
-  color: white;
-  padding: 8px;
-
-  .logo {
     display: flex;
-    align-self: center;
-    margin-left: 10px;
+    background-color: $grey;
+    color: white;
+    padding: 11px;
 
-    img {
-      border-radius: 50px;
-      max-width: 50px;
-    }
-
-    h3 {
-      align-self: center;
-      margin-left: 20px;
-    }
-  }
-
-  .navigation {
-    margin-left: auto;
-    align-self: center;
-    font-size: 20px;
-
-    ul {
+    .logo {
       display: flex;
-      list-style: none;
+      align-self: center;
+      margin-left: 10px;
 
-      li {
+      .logo-container {
+        
+        img {
+        border-radius: 50px;
+        // object-fit: contain;
+        max-width: 50px;
+      }
+      }
+
+      h3 {
+        align-self: center;
+        margin-left: 20px;
+      }
+    }
+
+    .navigation {
+      display: block;
+      margin-left: auto;
+      align-self: center;
+      font-size: 20px;
+
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
         margin-right: 15px;
 
         a {
@@ -84,6 +111,58 @@
 
           }
         }
+      }
+    }
+
+    .burger {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    
+    .navigation {
+      // display: none;
+      position: absolute;
+      right: -200px;
+      // height: auto;
+      top: 7vh;
+      background-color: $grey;
+      transition: 0.15s ease-in;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 30px;
+        text-align: center;
+
+        li {
+          margin-bottom: 28px;
+          margin-left: 10px;
+        }
+          
+      }
+    }
+
+    .active {
+      right: 0;
+    }
+
+    .burger {
+      display: inline-block;
+      margin-left: auto;
+      align-self: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+        
+      div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
       }
     }
   }

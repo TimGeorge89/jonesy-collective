@@ -3,13 +3,18 @@
   <div class="bottom-nav">
     <div class="fwrapper">
       <!-- FOOTER CONTENT -->
-      <div class="footer">
+      <div class="footer footer-copyright">
         <div class="footer-content">
           <p>Copyright © 2020 Jonesy Collective, All Rights Reserved</p>
         </div>
       </div>
 
-      
+      <div class="footer footer-header">
+        <div class="footer-content">
+          <h3>The Jonesy Collective</h3>
+        </div>
+      </div>
+
       <div class="footer">
         <div class="footer-content">
           <a href="https://www.facebook.com/thejonesycollective" target="_blank"><img src="/images/facebook.png"></a>
@@ -67,5 +72,27 @@
         }
       }
     }
+
+    @media screen and (max-width: 1160px) {
+      .footer {
+        width: 50%;
+      }
+
+      .footer-header {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 765px) {
+      .footer {
+        width: 100%;
+      }
+
+      .footer-copyright {
+        display: none;
+      }
+    }
+
+    
   }
 </style>

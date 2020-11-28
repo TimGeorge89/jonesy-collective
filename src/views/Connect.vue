@@ -12,35 +12,21 @@
 
     <div class="form-container">
         <div class="wrapper">
-          <div class="form">
-            <form class="contact-form">
-              <!-- FORM TOP -->
-              <div class="form-top">
-                <!-- NAME FORM -->
-                <div class="name">
-                  <label>Name:</label>
-                  <input type="text" name="user_name">
-                </div>
-                  <!-- EMAIL FORM -->
-                <div class="email">
-                  <label>Email:</label>
-                  <input type="email" name="user_email">
-                </div>
-
+          <div class="form-box">
+            <form>
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Name" id="name">
               </div>
-              <!-- FORM BOTTOM -->
-              <div class="form-bottom">
-                <!-- MESSAGE FORM -->
-                <div class="message">
-                  <label>Message:</label>
-                  <textarea name="message"></textarea>
-                    <!-- SUBMIT BUTTON -->
-                  <div class="submit">
-                    <input type="submit" value="Send">
-                  </div>
-                </div>
-                
+              <div class="field">
+                <label for="name">Email</label>
+                <input type="text" placeholder="Email" id="name">
               </div>
+              <div class="field">
+                <label for="name">Message</label>
+                <textarea placeholder="Type your message here"></textarea>
+              </div>
+              <button class="button-2">Send</button>
             </form>
           </div>
         </div>
@@ -92,19 +78,64 @@
     margin: 0 auto;
   }
 
-  .form {
+  .form-box {
     display: flex;
     width: auto;
-    color: white;
-    background: linear-gradient(45deg, rgba($dark-green, 1) 0%, rgba($light-green, 1) 100%);
+    color: black;
+    // background: linear-gradient(45deg, rgba($dark-green, 1) 0%, rgba($light-green, 1) 100%);
     border-radius: 10px 40px;
     box-shadow: 5px 10px 15px rgba(#333, 0.5);
     margin: -150px auto 0 auto;
-    padding: 50px;
+    // padding: 50px;
 
-    .contact-form {
-      
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(45deg, rgba($dark-green, 1) 0%, rgba($light-green, 1) 100%);
+      padding: 60px;
+      border-radius: 10px 40px;
+
+  .field {
+    width: 100%;
+    margin-bottom: 16px;
+    
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
+    input {
+      width: 100%;
+      padding: 5px;
+    }
+    textarea {
+      width: 100%;
+      padding: 5px;
+      min-height: 125px;
+    }
+  }
+
+  // button {
+  //   padding: 10px 20px;
+  //   background: steelblue;
+  //   color: #fff;
+  //   outline: 0;
+  //   border: 0;
+  //   border-radius: 5px;
+  // }
+}
+
+form {
+  .field {
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 48%;
+    }
+  }
+}
   }
 }
 </style>

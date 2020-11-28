@@ -18,14 +18,14 @@
         <div class="wrapper">
           <div class="a">
             <h3>Our Mission Summary</h3>
-            <p>Our mission, in tribute to the life and love of Alex Hwang Jones, is to educate, support and connect through visionary art and dance.</p>
+            <p>The Jonesy Collective provides a forum for creative artists to express and celebrate themselves in ways that inspire and support their peers – assisting young people who face homelessness, isolation from family, anxiety and depression, addictions and drug abuse - through art and cultural events where proceedings will be used to promote health and safety,  education and awareness on substance abuse issues, and support for our mother earth.</p>
           </div>
           <div class="b">
             <div class="b-content">
               <h3>About Us</h3>
               <p>The Jonesy Collective was founded on Oct. 8, 2020.  Local community art events are being planned where proceeds will be given to more mature national organizations such as MAPs and DanceSafe - organizations that reflect Alex’s goals and values, and where research and safety activities raise hope for more positive outcomes on mental health issues.</p>
               <p>Over the next several weeks this website will be built and updated to include calanders, events, videos, and pictures, as well as a way to donate to the foundation!</p>
-              <div>
+              <div class="about-buttons">
                 <router-link to="/about"><button class="button-2">About</button></router-link>
                 <a href="https://www.facebook.com/thejonesycollective" target="_blank" ><button class="button-2">Facebook</button></a>
               </div>
@@ -133,16 +133,26 @@
     color: white;
     background: linear-gradient(45deg, rgba($dark-green, 1) 0%, rgba($light-green, 1) 100%);
     border-radius: 10px 40px;
-    box-shadow: 5px 10px 15px rgba(#333, 0.5);
+    box-shadow: 5px 10px 15px rgba(#333, 0.2);
     margin-top: -150px;
     margin-left: auto;
     padding: 50px;
   }
 }
 
+@media screen and (max-width: 426px) {
+  .button-2 {
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin-right: 15px;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .content-2 {
-    
 
     .wrapper {
       flex-direction: column;
@@ -160,14 +170,32 @@
       margin: 0;
     }
   }
+
+  .villan {
+    padding: 0;
+    margin: 0;
+
+    .wrapper {
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tripple {
+      align-self: center;
+      margin: 20px;
+      min-width: 100%;
+      min-height: 350px;
+
+      .tripple-content {
+        text-align: center;
+      }
+    }
+  }
 }
 
   .villan {
-    // height: 500px;
     background-color: #eee;
-    // background-image: url('/images/lowpoly.jpg');
-    // background-position: bottom;
-    // background-size: cover;
     padding: 60px 30px;
 
     .wrapper {
@@ -183,7 +211,7 @@
       align-items: center;
       padding: 60px 20px;
       border-radius: 10px;
-      box-shadow: 5px 10px 15px rgba(#333, 0.5);
+      box-shadow: 5px 10px 15px rgba(#333, 0.2);
 
       .tripple-content {
         text-align: center;
