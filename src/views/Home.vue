@@ -27,7 +27,8 @@
               <p>Over the next several weeks this website will be built and updated to include calanders, events, videos, and pictures, as well as a way to donate to the foundation!</p>
               <div class="about-buttons">
                 <router-link to="/about"><button class="button-2">About</button></router-link>
-                <a href="https://www.facebook.com/thejonesycollective" target="_blank" ><button class="button-2">Facebook</button></a>
+                <a class="big-screen" href="https://www.facebook.com/thejonesycollective" target="_blank"><button class="button-2">Facebook</button></a>
+                <a class="small-screen" href="fb://thejonesycollective/thejonesycollective"><button class="button-2">Facebook</button></a>
               </div>
             </div>
           </div>
@@ -62,13 +63,17 @@
           </div>
         </div>
       </div>
-
-      
-
   </div>
 </template>
 
  <script>
+ export default {
+   data() {
+     return {
+
+     }
+   }
+ }
 
  </script>
 
@@ -137,10 +142,29 @@
     margin-top: -150px;
     margin-left: auto;
     padding: 50px;
+
+    .b-content {
+      .small-screen {
+        display: none;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 426px) {
+  .b {
+    .b-content {
+      .about-buttons {
+        .small-screen {
+        display: inline-block;
+      }
+      .big-screen {
+        display: none;
+      }
+      }
+    }
+  }
+
   .button-2 {
   color: white;
   padding: 10px 20px;
@@ -163,11 +187,16 @@
       width: 100%;
       margin: 0;
       padding: 0;
+
+      p {
+        margin-bottom: 40px;
+      }
     }
 
     .b {
       width: 100%;
       margin: 0;
+      padding: 25px;
     }
   }
 

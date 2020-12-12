@@ -21,9 +21,9 @@
           <li>
             <router-link @click.native="toggle()" to="/connect">Connect</router-link>
           </li>
-          <li>
+          <!-- <li>
             <a href="#">JC Artists</a>
-          </li>
+          </li> -->
         </ul>
       </div>
        <!-- MOBILE NAV -->

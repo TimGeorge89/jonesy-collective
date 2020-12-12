@@ -57,13 +57,13 @@
       </div>
 
     <!-- FOUNDERS -->
-    <div class="founders">
+    <!-- <div class="founders">
       <div class="team-title">
           <h1>Our Amazing Team</h1>
         </div>
-      <div class="wrapper">
+      <div class="wrapper"> -->
         <!-- CARDS -->
-        <div class="team-card">
+        <!-- <div class="team-card">
           <div>
             <img src="images/woman.jpg">
           </div>
@@ -82,10 +82,10 @@
                with a degree in Psychology. Mimi currently resides in Winter Park, Fl.
             </p>
           </div>
-        </div>
+        </div> -->
 
         <!-- CARDS -->
-        <div class="team-card">
+        <!-- <div class="team-card">
           <div>
             <img src="images/male.jpg">
           </div>
@@ -104,10 +104,10 @@
                with a degree in Psychology. Mimi currently resides in Winter Park, Fl.
             </p>
           </div>
-        </div>
+        </div> -->
 
         <!-- CARDS -->
-        <div class="team-card">
+        <!-- <div class="team-card">
           <div>
             <img src="images/woman.jpg">
           </div>
@@ -128,7 +128,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </template>
