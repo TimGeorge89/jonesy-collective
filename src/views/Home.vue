@@ -35,26 +35,26 @@
         </div>
       </div>
 
-      <div class="villan">
-        <div class="wrapper">
+      <!-- <div class="villan">
+        <div class="wrapper"> -->
           <!-- TIPPLE CARD -->
-          <div class="tripple">
+          <!-- <div class="tripple">
             <div class="tripple-content">
               <h3>Events</h3>
               <p>Events are being planned and will be updated here. If you have any questions or would like to plan an event you can contact us here or through our facebook page.</p>
               <router-link to="/connect"><button class="button">Connect</button></router-link>
             </div>
-          </div>
+          </div> -->
           <!-- TIPPLE CARD -->
-          <div class="tripple">
+          <!-- <div class="tripple">
             <div class="tripple-content">
               <h3>Artists</h3>
-              <p>A big part of the Jonesy Collective is our collective of artisits from all walks of life. Our artists are an integral part of our identity and what we stand for. You can check out our artisits here.</p>
-              <button>JC Artists</button>
+              <p>A big part of the Jonesy Collective is our collective of artisits from all walks of life. Our artists are an integral part of our identity and what we stand for. Coming soon.</p>
+              <button>Coming soon</button>
             </div>
-          </div>
+          </div> -->
           <!-- TIPPLE CARD -->
-          <div class="tripple">
+          <!-- <div class="tripple">
             <div class="tripple-content">
               <h3>Donate</h3>
               <p>Help our cause and many others by donating to the Jonesy Collective. 100% of your donation goes to helping educate, support and connect through visionary art and dance.</p>
@@ -62,7 +62,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
   </div>
 </template>
 
